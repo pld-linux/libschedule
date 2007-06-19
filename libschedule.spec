@@ -7,11 +7,11 @@ License:	GPL v2+
 Group:		Libraries
 Source0:	http://gpe.linuxtogo.org/download/source/%{name}-%{version}.tar.bz2
 # Source0-md5:	da63b0ed460c0f44b9f85774caf3fb0d
+Patch0:		%{name}-link.patch
 URL:		http://gpe.linuxtogo.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 2.0
-# gpe_error_box(), missing from pkgconfig checks and linking (probably needs fix)
 BuildRequires:	libgpewidget-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -52,6 +52,7 @@ Statyczna biblioteka libschedule.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
