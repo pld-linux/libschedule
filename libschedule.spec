@@ -1,13 +1,12 @@
 Summary:	GPE event scheduling library
 Summary(pl.UTF-8):	Biblioteka planowania zdarzeń GPE
 Name:		libschedule
-Version:	0.16
+Version:	0.17
 Release:	1
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://gpe.linuxtogo.org/download/source/%{name}-%{version}.tar.bz2
-# Source0-md5:	da63b0ed460c0f44b9f85774caf3fb0d
-Patch0:		%{name}-link.patch
+# Source0-md5:	ba3a1063a9e8cd5a730b3871e468c227
 URL:		http://gpe.linuxtogo.org/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
@@ -52,7 +51,6 @@ Statyczna biblioteka libschedule.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__libtoolize}
